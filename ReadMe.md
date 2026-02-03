@@ -40,3 +40,16 @@ The `.` tells django to create the project in the current directory and not make
 (django) $ python manage.py runserver
 ```
 
+3. Stop django local server 
+
+```bash
+(django) $ [ctrl + c]
+```
+
+4. Stop virtual environment
+
+```bash
+(django) $ exit
+```
+
+

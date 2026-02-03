@@ -1,3 +1,35 @@
+# Editors / IDEs
 .idea/
 .vscode/
+
+# Python virtual environments
+venv/
+.venv/
+env/
 *.venv/
+
+# Python cache / compiled files
+__pycache__/
+*.py[cod]
+
+# Django stuff
+db.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
