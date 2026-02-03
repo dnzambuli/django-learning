@@ -33,3 +33,10 @@
 ```
 
 The `.` tells django to create the project in the current directory and not make a new `test_project` folder
+
+2. Running Django's local web server
+
+```bash
+(django) $ python manage.py runserver
+```
+
