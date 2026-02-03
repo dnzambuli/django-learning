@@ -40,7 +40,7 @@ The `.` tells django to create the project in the current directory and not make
 (django) $ python manage.py runserver
 ```
 
-3. Stop django local server 
+3. Stop django local server
 
 ```bash
 (django) $ [ctrl + c]
@@ -52,4 +52,21 @@ The `.` tells django to create the project in the current directory and not make
 (django) $ exit
 ```
 
+---
 
+# Django File Structure
+
+```bash
+├── helloworld_project
+│├── __init__.py
+│├── settings.py
+│├── urls.py
+│└── wsgi.py
+└── manage.py
+```
+
+1. **settings.py** controls our project settings
+2. **urls.py** tells Django which pages to build in response to a browser or URL request
+3. **wsgi.py (Web Server Gateway Interface)** helps Django serve our eventual web pages)
+4. **manage.py** is used to execute various Django commands such as running the local web
+   server or creating a new app
