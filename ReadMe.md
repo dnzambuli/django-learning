@@ -52,7 +52,15 @@ The `.` tells django to create the project in the current directory and not make
 (django) $ exit
 ```
 
----
+5. Create an app `pages app`
+
+```bash
+(helloworld) $ python manage.py startapp pages
+```
+
+6. Register the application
+
+> add the app to `settings.py` under `INSTALLED_APPS =[...,<APPNAME>.apps.<APPNAME>Config]
 
 # Django File Structure
 
@@ -70,3 +78,62 @@ The `.` tells django to create the project in the current directory and not make
 3. **wsgi.py (Web Server Gateway Interface)** helps Django serve our eventual web pages)
 4. **manage.py** is used to execute various Django commands such as running the local web
    server or creating a new app
+
+# Apps
+
+Django uses the concept of projects and apps to keep code clean and readable.
+
+A single Django project contains one or more apps within it that all work together to power a
+web application.
+
+> For example, a real-world Django e-commerce site might have:
+>
+> - one app for user authentication,
+> - another app for payments, and
+> - a third app to power item listing details
+>
+> each focuses on an isolated piece of functionality _three distinct apps that all live within one top-level project_.
+
+## App File Structure
+
+```bash
+├── pages
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+```
+
+- **admin.py** is a configuration file for the built-in Django Admin app
+- **apps.py** is a configuration file for the app itself
+- **migrations/** keeps track of any changes to our models.py file so our database and models.py stay in sync
+- **models.py** is where we define our database models which Django automatically translates into database tables
+- **tests.py** is for our app-specific tests
+- **views.py** is where we handle the request/response logic for our web app
+
+## Install APPs
+
+Django doesn’t “know" about an app until we explicitly add it.
+
+---
+
+# URLs, Views, Models, Templates
+
+From typing in a URL, such as https://djangoforbeginners.com,
+
+1. the first thing that happens within our Django project is a `URLpattern` is found that matches the homepage.
+2. The URLpattern specifies `a view` which
+3. then determines the content for the page (usually from a database `model`) and
+4. then ultimately `a template `for styling and basic logic.
+
+The end result is sent back to the user as an `HTTP response`.
+
+```
+URL -> View -> Model (typically) -> Template
+```
+
+> Django **views** determine what content is displayed on a given page while **URLConfs** determine where that content is going. The **model** contains the content from the database and the **template** provides styling for it.
