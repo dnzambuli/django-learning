@@ -58,3 +58,14 @@ Django has automatically added primary key fields. [read here](django_discoverie
 
 Serializers turn your Django model into JSON (the data format used in APIs) and back
 
+### 5. Create Views 
+Use class-based or function-based views. Let’s go with class-based using DRF’s generics.
+
+### 6. Set up URLs
+Hooks where the model data can be accessed
+
+### 7. Test the implementation
+
+```shell
+(virtual environment) $ python manage.py runserver
+```
