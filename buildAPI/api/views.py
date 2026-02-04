@@ -21,8 +21,8 @@ class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TaskSerializer
 
 
-def task_view(request):
-    tasks = Task.objects.filter(title = Task.title)
-    serializer = TaskSerializer(tasks, many=True)
-    return JsonResponse(serializer.data)
+# def task_view(request):
+#     tasks = Task.objects.filter(title = Task.title)
+#     serializer = TaskSerializer(tasks, many=True)
+#     return JsonResponse(serializer.data)
 

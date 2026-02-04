@@ -13,7 +13,7 @@ class Task(models.Model):
 
     def __str__(self):
         """
-        the string representation of a task
+        the string representation of a tasks
         :return:
         """
         return self.title

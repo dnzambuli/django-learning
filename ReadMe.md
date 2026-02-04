@@ -137,3 +137,31 @@ URL -> View -> Model (typically) -> Template
 ```
 
 > Django **views** determine what content is displayed on a given page while **URLConfs** determine where that content is going. The **model** contains the content from the database and the **template** provides styling for it.
+
+---
+
+# API (Application Programming Interface)
+
+A defined way for software to request and exchange data. It specifies
+
+- what you can ask
+- how you can ask
+- what format the answer will be
+
+## Why use API
+
+1. To save time -- use ready made features from other developer
+2. To save money -- integrate functionality instead of developing new ideas
+3. To keep things secure -- trust the api developer instead of self validation
+4. To let apps work together -- cross interraction
+5. To get expert features instantly -- use features that are already available like google maps
+6. To enable innovation -- uber was only able to exist becasue of google maps api
+
+## How APIs work
+
+- Request -- send request to an API enpoint
+- Process -- API forwards the request to the server
+- Response -- Server processes the request and send back requested data
+- Delivery -- API returns the server response to the client
+
+## Types of APIs
