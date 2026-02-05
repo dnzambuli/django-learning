@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DB Test</title>
+</head>
+<body>
+    <h2>Current Users</h2>
+    <ol>
+        {% for user in users %}
+        <li>{{user}}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
