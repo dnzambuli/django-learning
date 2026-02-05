@@ -150,31 +150,17 @@ The fixed time required to complete a given project
     ChangedDate
 
 ---
-TaskType
-
-    TypeID (PK)
-    Name (e.g., Bug, Story, Epic, Task)
+# TimeLog
+    
+    TimeID
+    TaskID (FK to Task)
+    UserID (Fk to User)
+    HoursLogged
+    DateLogged
     Description
-    IconURL
+    CreationDate
 
-TaskTypeMapping
-
-    MappingID (PK)
-    TaskID (FK to Task)
-    TypeID (FK to TaskType)
-
-Label
-
-    LabelID (PK)
-    Name
-    Color
-    ProjectID (FK to Project)
-
-TaskLabel
-
-    TaskLabelID (PK)
-    TaskID (FK to Task)
-    LabelID (FK to Label)
+> Ordered from the newest time log
 
 
 ---
