@@ -93,17 +93,63 @@ The fixed time required to complete a given project
     Key (like DSA-18, ...)
     Description
     ProjectID (FK to Project)
+    ParentID (Self Reference)
+    SprintID
     CreatorUserID (FK to User)
     AssigneeUserID (FK to User)
-    Priority
+    WatcherUserID (FK to User)
+    Priority (critical, high, moderate, low)
     Status (restricted to: To Do, In Progress, Done; can be infered from title)
+    Completion Progess (story points)
     CreatedDate
     UpdatedDate
     DueDate
     EstimatedTime
     SpentTime
     IsArchived (instead of delete functionality)
+> indexed by 
+---
+### Comment
 
+    CommentID (PK)
+    TaskID (FK to Task)
+    PostedBy (FK to User)
+    Content
+    CreatedDate
+    UpdatedDate
+    IsArchived (instead of delete functionality)
+    ParentComment (Self Reference)
+    
+> Ordered from oldest to newest
+---
+# Attachment
+
+    AttachmentID (PK)
+    TaskID (FK to Task)
+    File
+    FileName
+    FileType
+    FilePath
+    FileSize
+    UploadedBy (FK to User)
+    UploadDate
+    Description
+
+> Ordered from the newest attachment to the oldest
+
+
+---
+# TaskHistory
+
+    HistoryID (PK)
+    TaskID (FK to Task)
+    UserID (FK to User who made change)
+    FieldChanged
+    OldValue
+    NewValue
+    ChangedDate
+
+---
 TaskType
 
     TypeID (PK)
@@ -116,37 +162,6 @@ TaskTypeMapping
     MappingID (PK)
     TaskID (FK to Task)
     TypeID (FK to TaskType)
-
-Comment
-
-    CommentID (PK)
-    TaskID (FK to Task)
-    UserID (FK to User)
-    Content
-    CreatedDate
-    UpdatedDate
-    IsArchived (instead of delete functionality)
-
-TaskHistory
-
-    HistoryID (PK)
-    TaskID (FK to Task)
-    UserID (FK to User who made change)
-    FieldChanged
-    OldValue
-    NewValue
-    ChangedDate
-
-Notification
-
-    NotificationID (PK)
-    UserID (FK to User who receives notification)
-    TaskID (FK to Task)
-    Type (e.g., TaskComplete, TaskUpdated, Comment)
-    Message
-    CreatedDate
-    IsRead
-    ReadDate
 
 Label
 
@@ -161,17 +176,19 @@ TaskLabel
     TaskID (FK to Task)
     LabelID (FK to Label)
 
-Attachment
 
-    AttachmentID (PK)
+---
+### Notification
+
+    NotificationID (PK)
+    Recipient (FK to User who receives notification)
     TaskID (FK to Task)
-    FileName
-    FileType
-    FilePath
-    FileSize
-    UploadedBy (FK to User)
-    UploadDate
-
+    Type (TaskComplete, TaskUpdated, Comment)
+    Message
+    CreatedDate
+    IsRead
+    ReadDate
+---
 ## Key Relationships
 
     A User can create/be assigned to many Tasks (one-to-many)
