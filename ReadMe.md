@@ -79,6 +79,12 @@ The `.` tells django to create the project in the current directory and not make
 4. **manage.py** is used to execute various Django commands such as running the local web
    server or creating a new app
 
+7. Django Shell
+
+```shell
+(virtual environment)$ python manage.py shell
+```
+
 # Apps
 
 Django uses the concept of projects and apps to keep code clean and readable.
