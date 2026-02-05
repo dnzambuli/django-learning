@@ -199,4 +199,4 @@ The fixed time required to complete a given project
     Task Relationships: The model supports parent-child relationships between tasks (through parent/child references in the Task table).
 
 ## ERD
-![ERD](Assets/Jira_Model.png)
+![ERD](Assets/Jira_Model_2.png)
