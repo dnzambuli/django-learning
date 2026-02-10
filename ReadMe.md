@@ -84,6 +84,14 @@ The `.` tells django to create the project in the current directory and not make
 ```shell
 (virtual environment)$ python manage.py shell
 ```
+8. Django Admin
+
+To help in modifying models through gui 
+
+```shell
+(virtual environment)$ python manage.py createsuperuser
+(virtual environment)$ python manage.py runserver
+```
 
 # Apps
 
