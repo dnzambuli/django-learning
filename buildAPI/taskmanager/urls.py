@@ -7,5 +7,5 @@ router.register(r'tasks', TaskViewSet, basename='task') # register TaskViewSet
 # router.register(r'users', CustomUserViewSet, basename='user') # register CustomUserViewSet
 
 urlpatterns = [
-    path('task/', include(router.urls)), # include the router urls
+    path('', include(router.urls)), # include the router urls
 ]
