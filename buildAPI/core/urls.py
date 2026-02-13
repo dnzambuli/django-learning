@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # import redirect view to redirect root url to api urls
-from django.views.generic import RedirectView
+# from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,5 @@ urlpatterns = [
 
     # for my app
     path('api/', include('taskmanager.urls')),  # include urls from taskmanager app
-    path('', RedirectView.as_view(url='/api/', permanent=False)),  # redirect root url to api urls
+    # path('', RedirectView.as_view(url='/api/', permanent=False)),  # redirect root url to api urls
 ]
