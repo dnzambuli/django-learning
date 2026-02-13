@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions
 from .models import Task, CustomUser
-from .serializers import TaskSerializer, CustomUserSerializer
+from .serializers import TaskSerializer#, CustomUserSerializer
 
 # Create your views here.
 class TaskViewSet(viewsets.ModelViewSet):
