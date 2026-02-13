@@ -77,6 +77,14 @@ TEMPLATES = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+
+
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
@@ -90,6 +98,8 @@ DATABASES = {
     }
 }
 
+# use my custom user model
+AUTH_USER_MODEL = 'taskmanager.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
