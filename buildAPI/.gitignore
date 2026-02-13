@@ -1,0 +1,74 @@
+# --- Python / Django Base ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Django Specifics ---
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+# If you use a custom static/media root outside the project folder
+/static/
+/media/
+
+# --- Environment & Secrets ---
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+auth.json
+secrets.json
+
+# --- Testing & Coverage ---
+htmlcov/
+.tox/
+.noserc
+.pytest_cache/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.coverage
+.coverage.*
+
+# --- OS Specific (The "Silent" Clutter) ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# --- IDEs & Editors (Universal Coverage) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+.sublime-project
+.sublime-workspace
