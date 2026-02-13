@@ -1,5 +1,5 @@
 """
-URL configuration for apiproject project.
+URL configuration for core project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -14,11 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
 from django.contrib import admin
 from django.urls import path, include
+# import redirect view to redirect root url to api urls
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
+
+    # for authentication and user management
+    path('auth/', include('djoser.urls')),  # djoser urls for user registration and authentication
+    path('auth/', include('djoser.urls.authtoken')),  # djos
+
+    # for my app
+    path('api/', include('taskmanager.urls')),  # include urls from taskmanager app
+    path('', RedirectView.as_view(url='/api/', permanent=False)),  # redirect root url to api urls
 ]
